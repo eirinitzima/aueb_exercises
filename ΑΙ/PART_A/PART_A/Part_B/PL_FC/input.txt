@@ -1,0 +1,7 @@
+A
+B
+A ^ B -> L
+A ^ P -> L
+B ^ L -> M
+L ^ M -> P
+P -> Q
