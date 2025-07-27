@@ -1,0 +1,23 @@
+{
+  "StoreName": "Wasabi Way",
+  "Latitude": 37.87,
+  "Longitude": 23.72,
+  "FoodCategory": "SUSHI",
+  "Stars": 4.9,
+  "NoOfVotes": 63,
+  "StoreLogo": "wasabiway.png",
+  "Products": [
+    {
+      "ProductName": "Dragon Roll",
+      "ProductType": "sushi",
+      "Available Amount": 55,
+      "Price": 9.8
+    },
+    {
+      "ProductName": "Spicy Tuna Roll",
+      "ProductType": "sushi",
+      "Available Amount": 60,
+      "Price": 8.5
+    }
+  ]
+}

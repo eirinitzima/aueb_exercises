@@ -1,0 +1,23 @@
+{
+  "StoreName": "Sushi Zen",
+  "Latitude": 38.01,
+  "Longitude": 23.72,
+  "FoodCategory": "sushi",
+  "Stars": 5,
+  "NoOfVotes": 22,
+  "StoreLogo": "sushi.png",
+  "Products": [
+    {
+      "ProductName": "California Roll",
+      "ProductType": "roll",
+      "Available Amount": 60,
+      "Price": 6.0
+    },
+    {
+      "ProductName": "Salmon Nigiri",
+      "ProductType": "nigiri",
+      "Available Amount": 50,
+      "Price": 8.5
+    }
+  ]
+}

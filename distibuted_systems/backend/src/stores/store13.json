@@ -1,0 +1,23 @@
+{
+  "StoreName": "Fit Salad Bar",
+  "Latitude": 37.85,
+  "Longitude": 23.74,
+  "FoodCategory": "SALAD",
+  "Stars": 4.4,
+  "NoOfVotes": 28,
+  "StoreLogo": "fitsalad.png",
+  "Products": [
+    {
+      "ProductName": "Quinoa Bowl",
+      "ProductType": "salad",
+      "Available Amount": 70,
+      "Price": 7.8
+    },
+    {
+      "ProductName": "Protein Boost",
+      "ProductType": "salad",
+      "Available Amount": 65,
+      "Price": 8.5
+    }
+  ]
+}
