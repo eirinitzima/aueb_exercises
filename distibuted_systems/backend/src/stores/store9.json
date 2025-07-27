@@ -1,0 +1,23 @@
+{
+  "StoreName": "Green Bowl",
+  "Latitude": 37.93,
+  "Longitude": 23.74,
+  "FoodCategory": "SALAD",
+  "Stars": 4.3,
+  "NoOfVotes": 30,
+  "StoreLogo": "greenbowl.png",
+  "Products": [
+    {
+      "ProductName": "Caesar Salad",
+      "ProductType": "salad",
+      "Available Amount": 85,
+      "Price": 7.5
+    },
+    {
+      "ProductName": "Greek Salad",
+      "ProductType": "salad",
+      "Available Amount": 90,
+      "Price": 6.5
+    }
+  ]
+}

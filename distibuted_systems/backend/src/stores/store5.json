@@ -1,0 +1,23 @@
+{
+  "StoreName": "Taco Fiesta",
+  "Latitude": 37.96,
+  "Longitude": 23.75,
+  "FoodCategory": "mexican",
+  "Stars": 4.2,
+  "NoOfVotes": 33,
+  "StoreLogo": "taco.png",
+  "Products": [
+    {
+      "ProductName": "Beef Taco",
+      "ProductType": "taco",
+      "Available Amount": 150,
+      "Price": 6.0
+    },
+    {
+      "ProductName": "Veggie Taco",
+      "ProductType": "taco",
+      "Available Amount": 100,
+      "Price": 5.5
+    }
+  ]
+}
