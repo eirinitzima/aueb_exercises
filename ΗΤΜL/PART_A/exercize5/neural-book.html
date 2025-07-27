@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Neural Networks Book</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #toc{
+            border: none;
+            top: 7%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            margin-top: 10px; 
+        }
+        #toc-container{
+            position: relative;
+            height: auto;
+            border-radius:10px;
+            background-image: url('images/ni.gif'); 
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        @media (max-width: 1000px) {
+            #toc-container {
+                position: fixed;
+                right: 15px; 
+                top: 48%; 
+                width: 6px; 
+                height: 50px; 
+                border-radius: 5px;
+            }
+            #toc{
+                position: absolute;
+                top: 7%;
+                left: -170px ;  
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="header_photo">
+            <img src="images/logo.webp" width="200" height="100">
+        </div>
+        <div id="menu">
+            <table id="nav_bar">
+                <tbody>
+                    <tr>
+                        <td><a href="index.html" target="_blank"> Homepage </a></td>
+                        <td><a href="categories.html" target="_blank"> Categories</a></td>
+                        <td><a href="about_us.html" target="_blank"> About us </a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button class="reg"><a href="registration.html" target="_blank">Register</a></button>
+    </header>
+    <hr/>
+
+    <main class="lectures" >
+        <!-- Book Information -->
+        <section class="info">
+            <h1>Graph Neural Networks in Action</h1>
+            <p><strong>Authors:</strong> Keita Broadwater</p>
+            <p><strong>Publication Year:</strong> 2023</p>
+            <p><strong>Summary:</strong>
+            A practical guide to powerful deep learning models based on graphs! Learn how to create modern graph neural networks for recommendation systems, molecular modeling, and more. In "Graph Neural Networks in Action" you will learn how to:
+                    Train and deploy a graph neural network
+                    Create node embeddings
+                    Use graph neural networks at scale for very large datasets
+                    Build a graph data pipeline
+                    Design a graph data schema
+                    Understand graph neural network classification
+                    Manage graph data with NetworkX
+                    "Graph Neural Networks in Action" teaches you how to build powerful deep learning models for processing data with graphs.
+            </p>
+            <img src="images/graph.jpeg" width="100" height="150" alt="Cover of the book Graph Neural Networks in Action">
+            <p><strong>Rating:</strong> 4.8/5 (540 reviews)</p>
+        </section>
+    
+        <section class="info" id="toc-container">
+            <!-- Button to trigger hover -->
+            <button id="toc-button">Show Chapters</button>
+            
+            <!-- Hidden Table of Contents -->
+            <div id="toc" >
+                <p><strong>Chapter:</strong></p>
+                <ul>
+                    <li><a href="#chapter1">Chapter 1: Discovering Graph Neural Networks</a></li>
+                    <li><a href="#chapter2">Chapter 2: System Design and Data Flow</a></li>
+                    <li><a href="#chapter3">Chapter 3: Graph Embeddings</a></li>
+                    <li><a href="#chapter4">Chapter 4: Graph Convolutional Networks (GCNs) & GraphSage</a></li>
+                </ul>
+            </div>
+
+
+        </section>
+
+
+        <!-- Chapters -->
+        <section id="chapter1" class="chapter">
+            <h2>Chapter 1: Discovering Graph Neural Networks</h2>
+            <p>
+            The chapter "Discovering Graph Neural Networks" focuses on the introduction and understanding of Graph Neural Networks (GNNs), a machine learning technique that processes data which can be represented as a graph, that is, a set of nodes and edges. GNNs allow for the modeling of complex relationships and data structures, such as social networks, biological systems, or communication networks. The chapter covers the basic principles of how they operate, how GNNs process graph data, and their importance in solving problems that require the analysis of structured relationships.
+            </p>
+            <img src="images/graph1.jpg" width="200" height="150" alt="Graph Neural Networks">
+            <p><em>Image 1: Knowledge from various fields of science and industry can be expressed as graphs.</em></p>
+            <a href="#toc">Return to the Table of Contents</a>
+        </section>
+
+        <section id="chapter2" class="chapter">
+            <h2>Chapter 2: System Design and Data Flow</h2>
+            <p>
+            The chapter "System Design and Data Flow" focuses on how systems are designed and organized for effective data management in graph and neural network applications. It explains the basic principles of designing a system that can handle large volumes of data and transform them appropriately for input into machine learning models. It covers data pipeline techniques that ensure the cleanliness, speed, and accuracy of data at every processing stage, from initial collection to model training, thus providing the foundations for the successful development and application of graph neural networks.
+            </p>
+            <img src="images/etl.png" width="200" height="150" alt="System Design and Data Flow">
+            <p><em>Image 2: ETL Pipeline</em></p>
+            <a href="#toc">Return to the Table of Contents</a>
+        </section>
+
+        <section id="chapter3" class="chapter">
+            <h2>Chapter 3: Graph Embeddings</h2>
+            <p>
+            The chapter "Graph Embeddings" focuses on graph embedding techniques, which convert nodes, edges, or entire graphs into low-dimensional vectors. These representations preserve important structural and intrinsic information of the original graph, making it easier for machine learning to work on them. Embeddings are used in applications such as link prediction, node clustering, and classification, and they form the foundation for more complex graph models like Graph Neural Networks (GNNs).
+            </p>
+            <img src="images/graphs3.webp" width="200" height="150" alt="Graph Embeddings">
+            <p><em>Image 3: Customer Data Graph</em></p>
+            <a href="#toc">Return to the Table of Contents</a>
+        </section>
+
+        <section id="chapter4" class="chapter">
+            <h2>Chapter 4: Graph Convolutional Networks (GCNs) & GraphSage</h2>
+            <p>
+            The chapter "Graph Convolutional Networks (GCNs) & GraphSage" focuses on two important methods for analyzing graph data: Graph Convolutional Networks (GCNs) and GraphSage. GCNs extend the traditional convolutional architecture to operate on graphs, allowing for the modeling of relationships between nodes (e.g., users or items) through the structure of their connections. On the other hand, GraphSage introduces a feature learning mechanism that leverages local information and neighbors of nodes to generalize to new, unseen nodes. The chapter includes techniques for training and using these models, as well as their applications in problems such as node classification and link prediction.
+            </p>
+            <img src="images/graphs4.webp" width="200" height="150" alt="GCNs">
+            <p><em>Image 4: Example of GCN</em></p>
+            <a href="#toc">Return to the Table of Contents</a>
+        </section>
+    </main>
+
+    <hr/>
+
+    <footer>
+        <p>Contact:
+            <a href="mailto:p3200038@aueb.gr">p3200038@aueb.gr</a> -
+            <a href="mailto:p3220201@aueb.gr">p3220201@aueb.gr</a>
+        </p>
+    </footer>
+</body>
+</html>

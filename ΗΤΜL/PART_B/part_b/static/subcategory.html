@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subcategory</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+    <header>
+        <div id="header_photo"><img src="images/logo.webp" width="200" height="100"></div>
+        <div id="menu">
+            <table id="nav_bar"></table>
+        </div>
+    </header>
+
+    <main>
+        <section id="subcategory">
+            <h1>Subcategory Details</h1>
+            <div id="loading">
+                <img src="images/loading.gif" alt="Loading..." />
+            </div>
+            <div class="items-container"></div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script id="items-template" type="text/x-handlebars-template">
+        {{#each items}}
+            <div class="item">
+                <h3>{{title}}</h3>
+                <img src="https://learning-hub-1whk.onrender.com/{{image}}" alt="{{title}}" onerror="this.onerror=null; this.src='default-image.jpg';">
+                <p>{{description}}</p>
+                <p>Price: {{cost}}€</p>
+    
+                {{#eq type "Book"}}
+                    <p><strong>Author:</strong> {{author}}</p>
+                    <p><strong>Publisher:</strong> {{publisher}}</p>
+                    <p><strong>Publication Date:</strong> {{publication_date}}</p>
+                {{else}}
+                    <p><strong>Type:</strong> {{type}}</p>
+                {{/eq}}
+    
+                {{#if features}}
+                    <table class="features-table">
+                        {{#each (parseFeatures features)}}
+                            <tr>
+                                <td>{{@key}}</td>
+                                <td>{{this}}</td>
+                            </tr>
+                        {{/each}}
+                    </table>
+                {{/if}}
+            </div>
+        {{/each}}
+    </script>
+
+    <script src="subcategory.js"></script>
+    <script src="index_data.js"></script>
+</body>
+
+</html>

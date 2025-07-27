@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="header_photo">
+            <img src="images/logo.webp" width="200" height="100" alt="Logo">
+        </div>
+        <div id="menu">
+            <table id="nav_bar"></table>
+        </div>
+    </header>
+    <hr/>
+
+    <!-- Loading GIF -->
+    <main>
+        <!-- Welcome Section -->
+        <section id="welcome"></section>
+        
+        <!-- Categories Section -->
+        <section id="featured-categories">
+            <h2>Education Categories</h2>
+            <hr/>
+            
+            <div class="category-container">
+                <div id="loading">
+                    <img src="images/loading.gif" alt="Loading..." />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <hr/>
+
+    <footer></footer>
+
+    <script id="welcome-template" type="text/x-handlebars-template">
+        <h1>{{label}}</h1>
+        <p>{{paragraph}}</p>
+    </script>
+
+    <script id="category-template" type="text/x-handlebars-template">
+        {{#each categories}}
+        <div class="category" style="background-image: url('images/category-{{id}}.jpg'); background-size: cover; background-position: center;">
+            <h3>{{title}}</h3>
+            <a href="category.html?id={{id}}" class="view-details">View Details</a>
+            {{#if subcategories}}
+            <ul>
+                {{#each subcategories}}
+                <li style="background-image: url('images/subcategory-{{id}}.jpg'); background-size: cover; background-position: center; padding: 20px; margin: 10px 0; border-radius: 8px;">
+                    <a href="subcategory.html?id={{id}}" class="subcategory-link">{{title}}</a>
+                </li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+    <script src="index.js"></script>
+    <script src="index_data.js"></script>
+</body>
+</html>

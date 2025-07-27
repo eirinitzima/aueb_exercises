@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="header_photo">
+            <img src="images/logo.webp" width="200" height="100" alt="Logo">
+        </div>
+        <div id="menu">
+            <table id="nav_bar">
+            </table>
+        </div>
+    </header>
+    
+
+    <div id="login-area">
+        <form id="login-form">
+            <section>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required/>
+            </section>
+
+            <section>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required/>
+            </section>
+
+          <button type="submit">Login</button>
+        </form>
+        <p id="login-message"></p>
+    </div>
+
+    <main>
+        <section id="category-items">
+            <!-- Loading GIF -->
+            <div id="loading">
+                <img src="images/loading.gif" alt="Loading..." />
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <!-- Handlebars Template -->
+    <script id="category-items-template" type="text/x-handlebars-template">
+        {{#each items}}
+        <div class="item" id="item{{this.id}}">
+            <h3>{{title}}</h3>
+            <img src="{{fullImagePath}}" alt="{{title}}" onerror="this.onerror=null; this.src='https://via.placeholder.com/300';">
+            <p>{{description}}</p>
+            <p>Price: {{cost}}€</p>
+            <button class="buyButton" data-id="{{this.id}}">Add to cart</button>
+            <div id="buy-message"></div>
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+    <script src="category.js"></script>
+    <script src="index_data.js"></script>
+
+        <script>
+            const username = localStorage.getItem('username'); // Retrieve from localStorage
+            const sessionId = localStorage.getItem('sessionId'); // Retrieve from localStorage
+    
+            if (username && sessionId) {
+                const cartLink = document.getElementById('cart-link');
+                cartLink.href = `cart.html?username=${username}&sessionId=${sessionId}`;
+            } else {
+                console.warn('User is not logged in. Cart link will not work.');
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reg-style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+
+<body id="body_reg">
+    <header>
+        <div id="header_photo">
+            <img src="images/logo.webp" width="200" height="100">
+        </div>
+        <div id="menu">
+            <table id="nav_bar">
+                <tbody>
+                    <tr>
+                        <td><a href="index.html" target="_blank">Homepage</a></td>
+                        <td><a href="categories.html" target="_blank">Categories</a></td>
+                        <td><a href="about_us.html" target="_blank">About Us</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button class="reg"><a href="registration.html" target="_blank">Register</a></button>
+    </header>
+    <hr/>
+
+    <main id="main_reg">
+     <form id="regform" class="needs-validation" novalidate>
+         
+        <!-- Personal Details -->
+          <fieldset class="border p-3">
+              <legend class="fw-bold">Personal Details</legend>
+              <div class="row g-3">
+                  <div class="col-md-4">
+                      <label for="validationCustom01">First Name</label>
+                      <input type="text" id="validationCustom01" placeholder="E.g., John" required autocomplete="given-name">
+                      <div class="feedback" id="first-name-feedback"></div>
+                  </div>
+                  <div class="col-md-4">
+                      <label for="validationCustom02">Last Name</label>
+                      <input type="text" id="validationCustom02" placeholder="E.g., Doe" required autocomplete="family-name">
+                      <div class="feedback" id="last-name-feedback"></div>
+                  </div>
+                  <div class="col-md-4">
+                      <label for="validationCustom50">Date of Birth</label>
+                      <input type="date" id="validationCustom50" min="1900-01-01" required>
+                      <div class="feedback" id="dob-feedback"></div>
+                  </div>
+              </div>
+              <div class="row g-3">
+                  <div class="col-md-6">
+                      <label for="validationCustom03">Address</label>
+                      <textarea id="validationCustom03" required></textarea>
+                      <div class="feedback" id="address-feedback"></div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="cityOfBirth">City of Birth</label>
+                    <input list="towns" id="cityOfBirth" placeholder="E.g., Athens" autocomplete="on" required>
+                    <datalist id="towns">
+                        <option value="Athens">
+                        <option value="Thessaloniki">
+                        <option value="Patras">
+                        <option value="Heraklion">
+                        <option value="Larissa">
+                        <option value="Volos">
+                        <option value="Chania">
+                        <option value="Ioannina">
+                        <option value="Kalamata">
+                        <option value="Rhodes">
+                    </datalist>
+                    <div class="feedback" id="city-birth-feedback"></div>
+                </div>                
+                  <div class="col-md-3">
+                      <label for="validationCustom05">Zip Code</label>
+                      <input type="text" id="validationCustom05" pattern="^\d{5}$" required autocomplete="postal-code">
+                      <div class="feedback" id="zipcode-feedback"></div>
+                  </div>
+              </div>
+          </fieldset>
+  
+          <!-- Login Details -->
+          <fieldset class="border p-3 mt-4">
+              <legend class="fw-bold">Login Details</legend>
+              <div class="row g-3">
+                  <div class="col-md-4">
+                      <label for="validationCustomUsername">Username</label>
+                      <div class="input-group">
+                          <span>@</span>
+                          <input type="text" id="validationCustomUsername" minlength="3" placeholder="E.g., john123" required>
+                          <div class="feedback" id="username-feedback"></div>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <label for="pswdf1">Password</label>
+                      <input type="password" id="pswdf1" minlength="8" placeholder="E.g., ********" required>
+                      <div class="feedback" id="password-feedback"></div>
+                  </div>
+                  <div class="col-md-4">
+                      <label for="pswdf2">Confirm Password</label>
+                      <input type="password" id="pswdf2" minlength="8" placeholder="E.g., ********" required>
+                      <div class="feedback" id="confirm-password-feedback"></div>
+                  </div>
+              </div>
+          </fieldset>
+  
+          <!-- Communication Preferences -->
+          <fieldset class="border p-3 mt-4">
+            <legend class="fw-bold">Communication Preferences</legend>
+            <div class="row g-3">
+                <div class="col-md-12">
+                    <label>Preferred Communication Method</label>
+                    <details>
+                        <summary>Choose a method</summary>
+                        <div>
+                            <input type="radio" name="communicationMethod" id="smsOption" value="SMS" required>
+                            <label for="smsOption">SMS</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="communicationMethod" id="emailOption" value="Email" required>
+                            <label for="emailOption">Email</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="communicationMethod" id="viberOption" value="Viber" required>
+                            <label for="viberOption">Viber</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="communicationMethod" id="whatsappOption" value="WhatsApp" required>
+                            <label for="whatsappOption">WhatsApp</label>
+                        </div>
+                    </details>
+                    <div class="feedback" id="communication-method-feedback"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="contactInfo">Contact Information</label>
+                    <input type="text" id="contactInfo" placeholder="E.g., email or phone number" required>
+                    <div class="feedback" id="contact-info-feedback"></div>
+                </div>
+            </div>
+         </fieldset>
+  
+          <!-- Questionnaire -->
+          <fieldset class="border p-3 mt-4">
+            <legend class="fw-bold">Educational and Professional Background</legend>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="educationLevel">Highest Education Level</label>
+                    <input list="educationLevels" id="educationLevel" autocomplete="on" required>
+                    <datalist id="educationLevels">
+                        <option value="High School">
+                        <option value="Bachelor's Degree">
+                        <option value="Master's Degree">
+                        <option value="PhD">
+                    </datalist>
+                    <div class="feedback" id="education-feedback"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="currentOccupation">Current Occupation</label>
+                    <input type="text" id="currentOccupation" placeholder="E.g., Software Developer" required>
+                    <div class="feedback" id="occupation-feedback"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="yearsExperience">Years of Professional Experience</label>
+                    <input type="number" id="yearsExperience" min="0" required>
+                    <div class="feedback" id="experience-feedback"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="skills">Skills</label>
+                    <textarea id="skills" placeholder="E.g., Python, Data Analysis" required></textarea>
+                    <div class="feedback" id="skills-feedback"></div>
+                </div>
+                <div class="col-md-12">
+                    <label for="careerAspirations">Career Aspirations</label>
+                    <textarea id="careerAspirations" placeholder="E.g., Become a Data Scientist" required></textarea>
+                    <div class="feedback" id="career-aspirations-feedback"></div>
+                </div>
+            </div>
+        </fieldset>
+  
+          <!-- Terms and Submission -->
+          <fieldset class="border p-3 mt-4">
+              <legend class="fw-bold">Terms and Submission</legend>
+              <div id="check">
+                  <input type="checkbox" id="invalidCheck" required>
+                  <label for="invalidCheck">I accept the Terms and Conditions</label>
+                  <div class="feedback" id="terms-feedback"></div>
+              </div>
+              <div>
+                  <button type="submit">Submit</button>
+              </div>
+          </fieldset>
+      </form>
+    </main>
+</body>
+</html>
