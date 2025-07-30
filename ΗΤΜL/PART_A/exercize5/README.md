@@ -42,7 +42,7 @@ The website is developed progressively in **5 structured exercises**, each addin
 
 ---
 
-### 🧱 Exercise 3 – Page Layout with CSS
+### Exercise 3 – Page Layout with CSS
 
 - Layout using **CSS Grid** (3 columns on desktop)
 - Inner content arranged with **Flexbox**
@@ -52,7 +52,7 @@ The website is developed progressively in **5 structured exercises**, each addin
 
 ---
 
-### 📱 Exercise 4 – Responsive Design
+### Exercise 4 – Responsive Design
 
 - Mobile-first single-column layout
 - Tablet layout (≥768px): 2 columns  
@@ -65,7 +65,7 @@ The website is developed progressively in **5 structured exercises**, each addin
 
 ---
 
-### 📝 Exercise 5 – HTML Forms & Validation
+### Exercise 5 – HTML Forms & Validation
 
 - Implements a user registration form:
   - Personal information
@@ -81,7 +81,7 @@ The website is developed progressively in **5 structured exercises**, each addin
 
 ---
 
-## 🛠️ Tools Used
+## Tools Used
 
 - **HTML5**, **CSS3**
 - **JavaScript (Vanilla)**
