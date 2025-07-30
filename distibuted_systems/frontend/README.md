@@ -1,6 +1,4 @@
 
-
-```markdown
 #  Android Client App – Food Delivery
 
 This is the **Android application** for the distributed food delivery system, developed for the _Distributed Systems_ course at AUEB (2024–2025). It serves as the frontend interface for end-users (customers).
@@ -33,7 +31,7 @@ This is the **Android application** for the distributed food delivery system, de
 
 ---
 
-## 🛠 Technologies
+##  Technologies
 
 - Android SDK
 - Java / Kotlin (depending on implementation)
@@ -56,11 +54,6 @@ This is the **Android application** for the distributed food delivery system, de
 - All store data is sent in JSON format.
 - Communication format must be consistent with backend.
 - Threading is **essential** to keep the UI responsive.
-
----
-
-- Eirini Tzima  
-- [Team Members]
 
 ---
 
